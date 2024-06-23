@@ -2,6 +2,12 @@
 
 Link de video descripcion: https://www.youtube.com/watch?v=lEVzPu9f8bI&t=14s
 
+Credenciales de prueba:
+Usuario: admin
+Contraseña: Admin123
+usuario: mametrio
+contraseña: memis123
+
 Para probar la Aplicacion. ingresar a http://localhost:8000/AppCafe/ 
 El home muestra el listado de libros en la base de datos. Al no haber usuarios logueados las unicas acciones diaponibles que se muetran son "iniciar sesion" y "registro".
 Registro despliega un formulario que debe ser llenado por el usuario.
