@@ -1,0 +1,24 @@
+{%extends "AppCafe/padre.html"%}
+
+{%load static%}
+
+{%block contenidoQueCambia%}
+
+    <center>
+        <h1><b> Listado de Libros </b></h1>
+        {% if user.is_authenticated and user.is_superuser %}
+        <a href="{% url 'NuevoLibro' %}">Nuevo Libro</a>
+        {% endif %}
+        {% for libro in libros %}
+            <li>Libro: {{libro.titulo}}
+                <p>
+                    <a href="{% url 'DetalleLibro' libro.pk %}">Ver</a>
+                    {% if user.is_authenticated and user.is_superuser %}
+                    <a href="{% url 'EditarLibro' libro.pk %}">Editar</a>
+                    <a href="{% url 'BorrarLibro' libro.pk %}">Borrar</a>
+                    {% endif %}
+                </p>
+            </li>
+        {% endfor %}
+    </center>
+{%endblock%}

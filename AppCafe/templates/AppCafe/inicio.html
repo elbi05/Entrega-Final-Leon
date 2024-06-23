@@ -1,0 +1,13 @@
+{%extends "AppCafe/padre.html"%}
+
+{%load static%}
+
+{%block contenidoQueCambia%}
+    <center>
+        <div>
+            <img height="100px" src="{{url}}">
+            <h1><b>Bienvenido {{user.username}}</b></h1>
+        </div>
+        
+    </center>
+{%endblock%}

@@ -1,0 +1,22 @@
+{%extends "AppCafe/padre.html"%}
+
+{%load static%}
+
+{%block contenidoQueCambia%}
+
+    <center>
+        <h1><b>Editar perfil de {{usuario}}</b></h1>
+        <form action="" method="post">{% csrf_token %}
+            <table>
+                {{ miFormulario.as_table }}
+            </table>
+            <input type="submit" value="Enviar">
+        </form>
+        <button type="button">
+            <a class="navbar-brand" href="{% url 'CambiarContra' %}">Cambiar contraseña</a>
+        </button>
+        <button type="button">
+            <a class="navbar-brand" href="{% url 'AgregarAvatar' %}">Agregar Avatar</a>
+        </button>
+    </center>
+{%endblock%}

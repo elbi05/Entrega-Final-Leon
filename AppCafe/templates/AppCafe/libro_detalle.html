@@ -1,0 +1,26 @@
+{%extends "AppCafe/padre.html"%}
+
+{%load static%}
+
+{%block contenidoQueCambia%}
+
+    <center>
+        <h1><b> Detalle de Libro</b></h1>
+        <p><b>Titulo: </b><i>{{libro.titulo}}</i></p>
+        <p><b>Autor: </b><i>{{libro.autor}}</i></p>
+        <p><b>ISBN: </b><i>{{libro.isbn}}</i></p>
+        <p><b>Editorial: </b><i>{{libro.editorial}}</i></p>
+        <p><b>Genero: </b><i>{{libro.genero}}</i></p>
+        <p><b>Precio: </b><i>{{libro.precio}}</i></p>
+        <img src="{{libro.imagen.url}}" style="max-width:200px; max-height:200px">
+        {% if user.is_authenticated %}
+        <p>
+            <a href="{% url 'ListaLibros' %}">Regresar</a>
+        </p>
+        {% else %}
+        <p>
+            <a href="{% url 'Home' %}">Regresar</a>
+        </p>
+        {% endif %}
+    </center>
+{%endblock%}

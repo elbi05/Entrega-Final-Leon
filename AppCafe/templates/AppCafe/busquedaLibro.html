@@ -1,0 +1,13 @@
+{%extends "AppCafe/padre.html"%}
+
+{%load static%}
+
+{%block contenidoQueCambia%}
+    <center>
+        <form action="/AppCafe/buscar/" method="GET">
+            <h1><b>Ingresa el titulo del libro que deseas buscar</b></h1>
+            <input type="text" name="libro" id="libro">
+            <input type="submit" value="Enviar">
+        </form>
+    </center>
+{%endblock%}

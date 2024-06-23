@@ -1,0 +1,14 @@
+{%extends "AppCafe/padre.html"%}
+
+{%load static%}
+
+{%block contenidoQueCambia%}
+    <center>
+        <h1><b>Los resultados de la busqueda son los siguientes</b></h1>
+        {% if libro %}
+            <ul>
+                <p>el libro que buscas esta disponible</p>>
+            </ul>
+        {% endif %}
+    </center>
+{%endblock%}

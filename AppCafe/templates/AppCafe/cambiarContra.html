@@ -1,0 +1,16 @@
+{%extends "AppCafe/padre.html"%}
+
+{%load static%}
+
+{%block contenidoQueCambia%}
+
+    <center>
+        <h1><b>Cambiar contraseña</b></h1>
+        <form action="" method="post">{% csrf_token %}
+            <table>
+                {{ form }}
+            </table>
+            <button>Cambiar</button>
+        </form> 
+    </center>
+{%endblock%}

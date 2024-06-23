@@ -1,0 +1,20 @@
+{%extends "AppCafe/padre.html"%}
+
+{%load static%}
+
+{%block contenidoQueCambia%}
+
+    <center>
+        <h1><b> Ingresa los datos del cliente</b></h1>
+
+        {% if miFormulario.errors %}
+            <p style="color: red;">Estan mal los datos, revisar</p>
+        {% endif %}
+        <form action="" method="post">{% csrf_token %}
+            <table>
+             {{ miFormulario.as_table }}
+            </table>
+            <input type="submit" value="Enviar">
+        </form> 
+    </center>
+{%endblock%}

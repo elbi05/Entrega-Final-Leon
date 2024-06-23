@@ -1,0 +1,15 @@
+{%extends "AppCafe/padre.html"%}
+
+{%load static%}
+
+{%block contenidoQueCambia%}
+
+    <center>
+        <h1><b> Borrar Libro</b></h1>
+
+        <form action="" method="post">{% csrf_token %}
+            Estas seguro que deseas borrar el libro {{libro.titulo}}?!!
+            <input type="submit" value="Eliminar">
+        </form> 
+    </center>
+{%endblock%}

@@ -1,0 +1,16 @@
+{%extends "AppCafe/padre.html"%}
+
+{%load static%}
+
+{%block contenidoQueCambia%}
+
+    <center>
+        <h1><b>Opciones de Administrador</b></h1>
+        <button type="button">
+            <a class="navbar-brand" href="{% url 'EditarPerfil' %}">Editar Perfil</a>
+        </button>
+        <button type="button">
+            <a class="navbar-brand">Usuarios Registrados</a>
+        </button>
+    </center>
+{%endblock%}

@@ -1,0 +1,15 @@
+{%extends "AppCafe/padre.html"%}
+
+{%load static%}
+
+{%block contenidoQueCambia%}
+
+    <center>
+        <h1><b> Crear Libro</b></h1>
+
+        <form action="" method="post" enctype="multipart/form-data">{% csrf_token %}
+            {{form.as_p}}
+            <input type="submit" value="Crear">
+        </form> 
+    </center>
+{%endblock%}

@@ -1,0 +1,18 @@
+{%extends "AppCafe/padre.html"%}
+
+{%load static%}
+
+{%block contenidoQueCambia%}
+
+    <center>
+        <h1><b> Registro</b></h1>
+
+        {% if miFormulario.errors %}
+            <p style="color: red;">Estan mal los datos, revisar</p>
+        {% endif %}
+        <form action="" method="post" enctype="multipart/form-data">{% csrf_token %}
+             {{form.as_p}}
+            <input type="submit" value="Registrate">
+        </form> 
+    </center>
+{%endblock%}

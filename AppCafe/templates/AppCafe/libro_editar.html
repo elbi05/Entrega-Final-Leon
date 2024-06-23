@@ -1,0 +1,15 @@
+{%extends "AppCafe/padre.html"%}
+
+{%load static%}
+
+{%block contenidoQueCambia%}
+
+    <center>
+        <h1><b> Editar Libro</b></h1>
+
+        <form action="" method="post">{% csrf_token %}
+            {{form.as_p}}
+            <input type="submit" value="Editar">
+        </form> 
+    </center>
+{%endblock%}
